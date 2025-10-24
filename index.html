@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyPharmaBD | Sinocare Safe Accu Blood Glucose Meter</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        
+
+        body {
+
+            line-height: 1.6;
+
+            color: #333;
+
+            background-color: #f8f9fa;
+
+        }
+
+        
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 0 15px;
+
+        }
+
+        
+
+        /* Header Styles */
+
+        header {
+
+            background-color: #fff;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+        }
+
+        
+
+        .header-container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 15px 0;
+
+        }
+
+        
+
+        .brand-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+        
+
+        .brand-logo-text {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+        
+
+        .brand-name {
+
+            font-size: 1.5rem;
+
+            font-weight: 700;
+
+            color: #2a7de1;
+
+            line-height: 1.2;
+
+        }
+
+        
+
+        .brand-tagline {
+
+            font-size: 0.8rem;
+
+            color: #666;
+
+        }
+
+        
+
+        nav ul {
+
+            display: flex;
+
+            list-style: none;
+
+        }
+
+        
+
+        nav ul li {
+
+            margin-left: 25px;
+
+        }
+
+        
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-weight: 500;
+
+            transition: color 0.3s;
+
+        }
+
+        
+
+        nav ul li a:hover {
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        .cta-button {
+
+            background-color: #ff6b35;
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: background-color 0.3s;
+
+        }
+
+        
+
+        .cta-button:hover {
+
+            background-color: #e55a2b;
+
+        }
+
+        
+
+        /* Hero Section */
+
+        .hero {
+
+            background: linear-gradient(135deg, #2a7de1 0%, #1a5bb5 100%);
+
+            color: white;
+
+            padding: 80px 0;
+
+            text-align: center;
+
+        }
+
+        
+
+        .hero h1 {
+
+            font-size: 2.8rem;
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .hero p {
+
+            font-size: 1.2rem;
+
+            max-width: 700px;
+
+            margin: 0 auto 30px;
+
+        }
+
+        
+
+        .hero-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+        }
+
+        
+
+        .btn-primary {
+
+            background-color: #ff6b35;
+
+            color: white;
+
+            padding: 12px 30px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: background-color 0.3s;
+
+        }
+
+        
+
+        .btn-primary:hover {
+
+            background-color: #e55a2b;
+
+        }
+
+        
+
+        .btn-secondary {
+
+            background-color: transparent;
+
+            color: white;
+
+            padding: 12px 30px;
+
+            border: 2px solid white;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: background-color 0.3s;
+
+        }
+
+        
+
+        .btn-secondary:hover {
+
+            background-color: rgba(255, 255, 255, 0.1);
+
+        }
+
+        
+
+        /* Product Section */
+
+        .product-section {
+
+            padding: 80px 0;
+
+            background-color: white;
+
+        }
+
+        
+
+        .product-container {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 50px;
+
+        }
+
+        
+
+        .product-image {
+
+            flex: 1;
+
+            text-align: center;
+
+        }
+
+        
+
+        .product-image img {
+
+            max-width: 100%;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        }
+
+        
+
+        .product-info {
+
+            flex: 1;
+
+        }
+
+        
+
+        .product-info h2 {
+
+            font-size: 2.2rem;
+
+            margin-bottom: 20px;
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        .product-info p {
+
+            margin-bottom: 20px;
+
+            font-size: 1.1rem;
+
+        }
+
+        
+
+        .features {
+
+            margin: 30px 0;
+
+        }
+
+        
+
+        .feature-item {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 15px;
+
+        }
+
+        
+
+        .feature-icon {
+
+            background-color: #e8f2ff;
+
+            color: #2a7de1;
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-right: 15px;
+
+            font-weight: bold;
+
+        }
+
+        
+
+        .price-container {
+
+            margin: 20px 0;
+
+        }
+
+        
+
+        .mrp-price {
+
+            font-size: 1.2rem;
+
+            color: #777;
+
+            text-decoration: line-through;
+
+            margin-bottom: 5px;
+
+        }
+
+        
+
+        .offer-price {
+
+            font-size: 2.2rem;
+
+            font-weight: 700;
+
+            color: #ff6b35;
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .savings {
+
+            background-color: #e8f7f0;
+
+            color: #2e7d32;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            font-weight: 600;
+
+            display: inline-block;
+
+            margin-bottom: 15px;
+
+        }
+
+        
+
+        .exclusive-badge {
+
+            background-color: #ff6b35;
+
+            color: white;
+
+            padding: 8px 15px;
+
+            border-radius: 20px;
+
+            font-weight: 600;
+
+            display: inline-block;
+
+            margin-bottom: 15px;
+
+            font-size: 0.9rem;
+
+        }
+
+        
+
+        .delivery-info {
+
+            margin-bottom: 20px;
+
+            padding: 15px;
+
+            background-color: #f0f8ff;
+
+            border-radius: 5px;
+
+            border-left: 4px solid #2a7de1;
+
+        }
+
+        
+
+        .delivery-info h3 {
+
+            margin-bottom: 10px;
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        .guarantee-badge {
+
+            background-color: #2a7de1;
+
+            color: white;
+
+            padding: 10px 15px;
+
+            border-radius: 5px;
+
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            font-weight: 600;
+
+        }
+
+        
+
+        .order-buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+        
+
+        .order-buttons .btn-primary {
+
+            flex: 1;
+
+            min-width: 150px;
+
+            text-align: center;
+
+        }
+
+        
+
+        /* Order Section */
+
+        .order-section {
+
+            padding: 80px 0;
+
+            background-color: #f8f9fa;
+
+        }
+
+        
+
+        .order-container {
+
+            display: flex;
+
+            gap: 50px;
+
+        }
+
+        
+
+        .order-form {
+
+            flex: 1;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+        }
+
+        
+
+        .order-form h2 {
+
+            margin-bottom: 20px;
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: 500;
+
+        }
+
+        
+
+        .form-group input, .form-group select, .form-group textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            font-size: 1rem;
+
+        }
+
+        
+
+        .payment-methods {
+
+            margin: 20px 0;
+
+        }
+
+        
+
+        .payment-methods h3 {
+
+            margin-bottom: 15px;
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        .payment-options {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+        }
+
+        
+
+        .payment-option {
+
+            flex: 1;
+
+            min-width: 120px;
+
+            text-align: center;
+
+            padding: 15px;
+
+            border: 2px solid #ddd;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            transition: all 0.3s;
+
+        }
+
+        
+
+        .payment-option:hover, .payment-option.selected {
+
+            border-color: #2a7de1;
+
+            background-color: #f0f8ff;
+
+        }
+
+        
+
+        .payment-icon {
+
+            font-size: 2rem;
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .bkash { color: #e2136e; }
+
+        .visa { color: #1a1f71; }
+
+        .mastercard { color: #eb001b; }
+
+        .cod { color: #ff6b35; }
+
+        
+
+        .order-summary {
+
+            flex: 1;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            height: fit-content;
+
+        }
+
+        
+
+        .order-summary h2 {
+
+            margin-bottom: 20px;
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        .summary-item {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 15px;
+
+            padding-bottom: 15px;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+        
+
+        .summary-total {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-weight: 700;
+
+            font-size: 1.2rem;
+
+            margin-top: 20px;
+
+            padding-top: 20px;
+
+            border-top: 2px solid #eee;
+
+        }
+
+        
+
+        /* Benefits Section */
+
+        .benefits {
+
+            padding: 80px 0;
+
+            background-color: white;
+
+        }
+
+        
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+        }
+
+        
+
+        .section-title h2 {
+
+            font-size: 2.2rem;
+
+            color: #2a7de1;
+
+            margin-bottom: 15px;
+
+        }
+
+        
+
+        .section-title p {
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            font-size: 1.1rem;
+
+        }
+
+        
+
+        .benefits-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 30px;
+
+        }
+
+        
+
+        .benefit-card {
+
+            background-color: #f8f9fa;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            text-align: center;
+
+            transition: transform 0.3s;
+
+        }
+
+        
+
+        .benefit-card:hover {
+
+            transform: translateY(-10px);
+
+        }
+
+        
+
+        .benefit-icon {
+
+            font-size: 2.5rem;
+
+            color: #2a7de1;
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .benefit-card h3 {
+
+            margin-bottom: 15px;
+
+            color: #333;
+
+        }
+
+        
+
+        /* Premium Features Section */
+
+        .premium-features {
+
+            padding: 80px 0;
+
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f2ff 100%);
+
+        }
+
+        
+
+        .feature-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 30px;
+
+            margin-top: 50px;
+
+        }
+
+        
+
+        .feature-box {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            transition: transform 0.3s;
+
+        }
+
+        
+
+        .feature-box:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+        
+
+        .feature-box i {
+
+            font-size: 2.5rem;
+
+            color: #2a7de1;
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .feature-box h3 {
+
+            margin-bottom: 15px;
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        /* Guarantee Section */
+
+        .guarantee-section {
+
+            padding: 80px 0;
+
+            background-color: white;
+
+            text-align: center;
+
+        }
+
+        
+
+        .guarantee-card {
+
+            background: linear-gradient(135deg, #2a7de1 0%, #1a5bb5 100%);
+
+            color: white;
+
+            padding: 50px;
+
+            border-radius: 15px;
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+        }
+
+        
+
+        .guarantee-card h2 {
+
+            font-size: 2.5rem;
+
+            margin-bottom: 20px;
+
+        }
+
+        
+
+        .guarantee-card p {
+
+            font-size: 1.2rem;
+
+            margin-bottom: 30px;
+
+        }
+
+        
+
+        /* Strips Section */
+
+        .strips-section {
+
+            padding: 80px 0;
+
+            background-color: #f8f9fa;
+
+        }
+
+        
+
+        .strips-container {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 50px;
+
+        }
+
+        
+
+        .strips-image {
+
+            flex: 1;
+
+            text-align: center;
+
+        }
+
+        
+
+        .strips-info {
+
+            flex: 1;
+
+        }
+
+        
+
+        .strips-price-container {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            margin-top: 20px;
+
+        }
+
+        
+
+        /* Footer */
+
+        footer {
+
+            background-color: #1a1a1a;
+
+            color: #aaa;
+
+            padding: 60px 0 20px;
+
+        }
+
+        
+
+        .footer-content {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 40px;
+
+            margin-bottom: 40px;
+
+        }
+
+        
+
+        .footer-column h3 {
+
+            color: white;
+
+            margin-bottom: 20px;
+
+            font-size: 1.2rem;
+
+        }
+
+        
+
+        .footer-column ul {
+
+            list-style: none;
+
+        }
+
+        
+
+        .footer-column ul li {
+
+            margin-bottom: 10px;
+
+        }
+
+        
+
+        .footer-column ul li a {
+
+            color: #aaa;
+
+            text-decoration: none;
+
+            transition: color 0.3s;
+
+        }
+
+        
+
+        .footer-column ul li a:hover {
+
+            color: white;
+
+        }
+
+        
+
+        .social-links {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 20px;
+
+        }
+
+        
+
+        .social-links a {
+
+            color: #aaa;
+
+            font-size: 1.2rem;
+
+            transition: color 0.3s;
+
+        }
+
+        
+
+        .social-links a:hover {
+
+            color: white;
+
+        }
+
+        
+
+        .copyright {
+
+            text-align: center;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #333;
+
+            font-size: 0.9rem;
+
+        }
+
+        
+
+        /* Responsive Styles */
+
+        @media (max-width: 768px) {
+
+            .header-container {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+            
+
+            nav ul {
+
+                margin-top: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+            
+
+            nav ul li {
+
+                margin: 5px 10px;
+
+            }
+
+            
+
+            .hero h1 {
+
+                font-size: 2.2rem;
+
+            }
+
+            
+
+            .product-container, .order-container, .strips-container {
+
+                flex-direction: column;
+
+            }
+
+            
+
+            .hero-buttons {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            
+
+            .btn-primary, .btn-secondary {
+
+                width: 100%;
+
+                max-width: 300px;
+
+                margin-bottom: 10px;
+
+            }
+
+            
+
+            .payment-options {
+
+                flex-direction: column;
+
+            }
+
+            
+
+            .order-buttons {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+        
+
+        /* Bengali Text Styles */
+
+        .bengali {
+
+            font-family: 'SolaimanLipi', 'Siyam Rupali', Arial, sans-serif;
+
+        }
+
+        
+
+        .mixed-text {
+
+            line-height: 1.8;
+
+        }
+
+        
+
+        /* Contact Info Styles */
+
+        .contact-info {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 5px;
+
+        }
+
+        
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+        
+
+        .contact-icon {
+
+            color: #2a7de1;
+
+            width: 20px;
+
+        }
+
+        /* Logo Styles */
+
+        .logo-placeholder {
+
+            width: 50px;
+
+            height: 50px;
+
+            background: linear-gradient(135deg, #2a7de1 0%, #1a5bb5 100%);
+
+            border-radius: 8px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            font-weight: bold;
+
+            font-size: 12px;
+
+            text-align: center;
+
+            line-height: 1.2;
+
+        }
+
+        
+
+        /* Image Upload Placeholder */
+
+        .image-upload-placeholder {
+
+            width: 100%;
+
+            height: 400px;
+
+            background-color: #f8f9fa;
+
+            border: 2px dashed #ddd;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #666;
+
+            cursor: pointer;
+
+            transition: all 0.3s;
+
+        }
+
+        
+
+        .image-upload-placeholder:hover {
+
+            border-color: #2a7de1;
+
+            background-color: #f0f8ff;
+
+        }
+
+        
+
+        .upload-icon {
+
+            font-size: 3rem;
+
+            margin-bottom: 15px;
+
+            color: #2a7de1;
+
+        }
+
+        
+
+        .strips-offer {
+
+            background-color: #fff9e6;
+
+            border-left: 4px solid #ffc107;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+            margin: 20px 0;
+
+        }
+
+        
+
+        .exclusive-price {
+
+            background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            text-align: center;
+
+            margin: 20px 0;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="container header-container">
+
+            <div class="brand-logo">
+
+                <!-- Logo Placeholder - Replace with your actual logo -->
+
+                <div class="logo-placeholder">
+
+                    MyPharma<br>BD
+
+                </div>
+
+                <div class="brand-logo-text">
+
+                    <div class="brand-name">MyPharma BD</div>
+
+                    <div class="brand-tagline">Trusted Medical & Health Store</div>
+
+                </div>
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Products</a></li>
+
+                    <li><a href="#">About Us</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                    <li><a href="#order" class="cta-button">Order Now</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>Sinocare Safe Accu Blood Glucose Monitoring System</h1>
+
+            <p class="mixed-text">Only We Sell at this Price in Whole Bangladesh! <strong>Exclusive 2-Year Warranty</strong> only from MyPharmaBD <span class="bengali">- পুরো বাংলাদেশে শুধুমাত্র আমরা এই দামে বিক্রি করি! মাইফার্মাবিডি থেকে এক্সক্লুসিভ ২-বছরের ওয়ারেন্টি</span></p>
+
+            <div class="hero-buttons">
+
+                <a href="#order" class="btn-primary">Order Now <span class="bengali">- অর্ডার করুন</span></a>
+
+                <a href="#features" class="btn-secondary">Learn More <span class="bengali">- আরও জানুন</span></a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Product Section -->
+
+    <section class="product-section" id="features">
+
+        <div class="container product-container">
+
+            <div class="product-image">
+
+                <!-- Product Image Upload Area -->
+
+                <div class="image-upload-placeholder">
+
+                    <i class="fas fa-camera upload-icon"></i>
+
+                    <h3>Upload Product Image</h3>
+
+                    <p>Click here or drag and drop your product image</p>
+
+                    <p class="bengali">এখানে ক্লিক করুন অথবা আপনার পণ্যের ছবি ড্রাগ এবং ড্রপ করুন</p>
+
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <h2>Sinocare Safe Accu Device</h2>
+
+                <p class="mixed-text">The Sinocare Safe Accu Blood Glucose Monitoring System provides accurate and reliable glucose readings in just 5 seconds. <span class="bengali">সিনোকেয়ার সেফ অ্যাকিউ ব্লাড গ্লুকোজ মনিটরিং সিস্টেম মাত্র ৫ সেকেন্ডে সঠিক এবং নির্ভরযোগ্য গ্লুকোজ রিডিং প্রদান করে।</span></p>
+
+                
+
+                <div class="guarantee-badge">
+
+                    <i class="fas fa-shield-alt"></i> 2-Year Exclusive Warranty from MyPharmaBD
+
+                </div>
+
+                
+
+                <div class="price-container">
+
+                    <div class="mrp-price">MRP: ৳ 1,850</div>
+
+                    <div class="exclusive-badge">Only We Sell at This Price in Bangladesh!</div>
+
+                    <div class="offer-price">Exclusive Offer Price: ৳ 800</div>
+
+                    <div class="savings">You Save: ৳ 1,050 (57% OFF)</div>
+
+                </div>
+
+                
+
+                <div class="features">
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Fast results in just 5 seconds <span class="bengali">- মাত্র ৫ সেকেন্ডে দ্রুত ফলাফল</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Small blood sample required (0.5μL) <span class="bengali">- অল্প রক্তের নমুনা প্রয়োজন (০.৫μL)</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">500-test memory with date and time <span class="bengali">- ৫০০-টেস্ট মেমরি তারিখ এবং সময়সহ</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">14-day average tracking <span class="bengali">- ১৪-দিনের গড় ট্র্যাকিং</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Easy to use <span class="bengali">- ব্যবহারে সহজ</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Includes <strong>5 FREE test strips</strong> <span class="bengali">- <strong>৫টি ফ্রি টেস্ট স্ট্রিপ</strong> সহ</span></div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="delivery-info">
+
+                    <h3 class="mixed-text">Delivery Information <span class="bengali">- ডেলিভারি তথ্য</span></h3>
+
+                    <p class="mixed-text">Inside Dhaka: <strong>FREE</strong> <span class="bengali">- ঢাকার ভিতরে: বিনামূল্যে</span></p>
+
+                    <p class="mixed-text">Outside Dhaka: <strong>৳ 120</strong> <span class="bengali">- ঢাকার বাইরে: ১২০ টাকা</span></p>
+
+                    <p class="mixed-text" style="margin-top: 10px;"><strong>Delivery Time:</strong> Inside Dhaka 1-2 days, Outside Dhaka 2-3 days <span class="bengali">- <strong>ডেলিভারি সময়:</strong> ঢাকার ভিতরে ১-২ দিন, ঢাকার বাইরে ২-৩ দিন</span></p>
+
+                </div>
+
+                
+
+                <div class="order-buttons">
+
+                    <a href="#order" class="btn-primary" data-product="device">Order Device Only <span class="bengali">- ডিভাইস অর্ডার করুন</span></a>
+
+                    <a href="#order" class="btn-primary" data-product="combo">Order Combo <span class="bengali">- কম্বো অর্ডার করুন</span></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Strips Section -->
+
+    <section class="strips-section">
+
+        <div class="container strips-container">
+
+            <div class="strips-info">
+
+                <h2>Sinocare Test Strips (50 pcs)</h2>
+
+                <p class="mixed-text">Get the most affordable test strips in Bangladesh exclusively from MyPharmaBD. Perfect for regular monitoring of your blood glucose levels.</p>
+
+                
+
+                <div class="strips-price-container">
+
+                    <div class="mrp-price">MRP: ৳ 1,700</div>
+
+                    <div class="exclusive-badge">Cheapest Price in Bangladesh!</div>
+
+                    <div class="offer-price">Exclusive Offer Price: ৳ 900</div>
+
+                    <div class="savings">You Save: ৳ 800 (47% OFF)</div>
+
+                </div>
+
+                
+
+                <div class="features">
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Compatible with Sinocare Safe Accu <span class="bengali">- সিনোকেয়ার সেফ অ্যাকিউ-এর সাথে সামঞ্জস্যপূর্ণ</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Accurate and reliable results <span class="bengali">- সঠিক এবং নির্ভরযোগ্য ফলাফল</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Small blood sample (0.5μL) <span class="bengali">- অল্প রক্তের নমুনা (০.৫μL)</span></div>
+
+                    </div>
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">✓</div>
+
+                        <div class="mixed-text">Fast absorption technology <span class="bengali">- দ্রুত শোষণ প্রযুক্তি</span></div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="exclusive-price">
+
+                    <h3 class="mixed-text">Special Combo Offer <span class="bengali">- বিশেষ কম্বো অফার</span></h3>
+
+                    <p class="mixed-text">Device + 50 Strips: <strong>৳ 1,700</strong> (Save ৳ 1,850) <span class="bengali">- ডিভাইস + ৫০ স্ট্রিপ: <strong>৳ ১,৭০০</strong> (সেভ করুন ৳ ১,৮৫০)</span></p>
+
+                </div>
+
+                
+
+                <div class="order-buttons">
+
+                    <a href="#order" class="btn-primary" data-product="strips">Order Strips Only <span class="bengali">- স্ট্রিপস অর্ডার করুন</span></a>
+
+                    <a href="#order" class="btn-primary" data-product="combo">Order Combo <span class="bengali">- কম্বো অর্ডার করুন</span></a>
+
+                </div>
+
+            </div>
+
+            <div class="strips-image">
+
+                <!-- Strips Image Upload Area -->
+
+                <div class="image-upload-placeholder">
+
+                    <i class="fas fa-camera upload-icon"></i>
+
+                    <h3>Upload Test Strips Image</h3>
+
+                    <p>Click here or drag and drop your strips image</p>
+
+                    <p class="bengali">এখানে ক্লিক করুন অথবা আপনার স্ট্রিপসের ছবি ড্রাগ এবং ড্রপ করুন</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Premium Features Section -->
+
+    <section class="premium-features">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2 class="mixed-text">Why Sinocare Safe Accu is Your Best Choice <span class="bengali">- কেন সিনোকেয়ার সেফ অ্যাকিউ আপনার সেরা পছন্দ</span></h2>
+
+                <p class="mixed-text">Advanced features that make diabetes management easier and more accurate <span class="bengali">- উন্নত বৈশিষ্ট্য যা ডায়াবেটিস ব্যবস্থাপনা সহজ এবং আরও সঠিক করে তোলে</span></p>
+
+            </div>
+
+            
+
+            <div class="feature-grid">
+
+                <div class="feature-box">
+
+                    <i class="fas fa-tachometer-alt"></i>
+
+                    <h3>Ultra Fast Results</h3>
+
+                    <p class="mixed-text">Get accurate readings in just 5 seconds <span class="bengali">- মাত্র ৫ সেকেন্ডে সঠিক রিডিং পান</span></p>
+
+                </div>
+
+                
+
+                <div class="feature-box">
+
+                    <i class="fas fa-tint"></i>
+
+                    <h3>Tiny Blood Sample</h3>
+
+                    <p class="mixed-text">Only 0.5μL blood required for testing <span class="bengali">- পরীক্ষার জন্য মাত্র ০.৫μL রক্ত প্রয়োজন</span></p>
+
+                </div>
+
+                
+
+                <div class="feature-box">
+
+                    <i class="fas fa-memory"></i>
+
+                    <h3>Smart Memory</h3>
+
+                    <p class="mixed-text">Stores 500 tests with date & time <span class="bengali">- তারিখ এবং সময় সহ ৫০০টি টেস্ট সংরক্ষণ করে</span></p>
+
+                </div>
+
+                
+
+                <div class="feature-box">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    <h3>Trend Analysis</h3>
+
+                    <p class="mixed-text">14-day average tracking for better management <span class="bengali">- ভাল ব্যবস্থাপনার জন্য ১৪-দিনের গড় ট্র্যাকিং</span></p>
+
+                </div>
+
+                
+
+                <div class="feature-box">
+
+                    <i class="fas fa-battery-full"></i>
+
+                    <h3>Long Battery Life</h3>
+
+                    <p class="mixed-text">1000 tests with just 2 AAA batteries <span class="bengali">- মাত্র ২টি AAA ব্যাটারি দিয়ে ১০০০টি টেস্ট</span></p>
+
+                </div>
+
+                
+
+                <div class="feature-box">
+
+                    <i class="fas fa-user-check"></i>
+
+                    <h3>Easy to Use</h3>
+
+                    <p class="mixed-text">Simple two-button operation for everyone <span class="bengali">- সবার জন্য সহজ দুই-বোতাম অপারেশন</span></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Guarantee Section -->
+
+    <section class="guarantee-section">
+
+        <div class="container">
+
+            <div class="guarantee-card">
+
+                <h2><i class="fas fa-shield-alt"></i> Exclusive 2-Year Warranty</h2>
+
+                <p class="mixed-text">Only from MyPharmaBD - If the machine shows any functional problem, we provide complete support and replacement for 2 years</p>
+
+                <p class="bengali">শুধুমাত্র মাইফার্মাবিডি থেকে - যদি মেশিনে কোনো কার্যকরী সমস্যা দেখা দেয়, আমরা ২ বছর পর্যন্ত সম্পূর্ণ সমর্থন এবং প্রতিস্থাপন প্রদান করি</p>
+
+                <a href="#order" class="btn-primary">Get Your Warranty Now</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Order Section -->
+
+    <section class="order-section" id="order">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2 class="mixed-text">Order Your Sinocare Safe Accu <span class="bengali">- আপনার সিনোকেয়ার সেফ অ্যাকিউ অর্ডার করুন</span></h2>
+
+                <p class="mixed-text">Fill out the form below to place your order <span class="bengali">- আপনার অর্ডার দিতে নিচের ফর্মটি পূরণ করুন</span></p>
+
+            </div>
+
+            
+
+            <div class="order-container">
+
+                <div class="order-form">
+
+                    <h2 class="mixed-text">Shipping Information <span class="bengali">- শিপিং তথ্য</span></h2>
+
+                    
+
+                    <form id="orderForm">
+
+                        <div class="form-group">
+
+                            <label for="name" class="mixed-text">Full Name <span class="bengali">- পূর্ণ নাম</span></label>
+
+                            <input type="text" id="name" name="name" required>
+
+                        </div>
+
+                        
+
+                        <div class="form-group">
+
+                            <label for="phone" class="mixed-text">Phone Number <span class="bengali">- ফোন নম্বর</span></label>
+
+                            <input type="tel" id="phone" name="phone" required>
+
+                        </div>
+
+                        
+
+                        <div class="form-group">
+
+                            <label for="email" class="mixed-text">Email Address <span class="bengali">- ইমেল ঠিকানা</span></label>
+
+                            <input type="email" id="email" name="email">
+
+                        </div>
+
+                        
+
+                        <div class="form-group">
+
+                            <label for="address" class="mixed-text">Full Address <span class="bengali">- সম্পূর্ণ ঠিকানা</span></label>
+
+                            <textarea id="address" name="address" rows="3" required></textarea>
+
+                        </div>
+
+                        
+
+                        <div class="form-group">
+
+                            <label for="city" class="mixed-text">District <span class="bengali">- জেলা</span></label>
+
+                            <select id="city" name="city" required>
+
+                                <option value="">Select District <span class="bengali">- জেলা নির্বাচন করুন</span></option>
+
+                                <option value="dhaka">Dhaka <span class="bengali">- ঢাকা</span></option>
+
+                                <option value="faridpur">Faridpur <span class="bengali">- ফরিদপুর</span></option>
+
+                                <option value="gazipur">Gazipur <span class="bengali">- গাজীপুর</span></option>
+
+                                <option value="gopalganj">Gopalganj <span class="bengali">- গোপালগঞ্জ</span></option>
+
+                                <option value="kishoreganj">Kishoreganj <span class="bengali">- কিশোরগঞ্জ</span></option>
+
+                                <option value="madaripur">Madaripur <span class="bengali">- মাদারীপুর</span></option>
+
+                                <option value="manikganj">Manikganj <span class="bengali">- মানিকগঞ্জ</span></option>
+
+                                <option value="munshiganj">Munshiganj <span class="bengali">- মুন্সিগঞ্জ</span></option>
+
+                                <option value="narayanganj">Narayanganj <span class="bengali">- নারায়ণগঞ্জ</span></option>
+
+                                <option value="narsingdi">Narsingdi <span class="bengali">- নরসিংদী</span></option>
+
+                                <option value="rajbari">Rajbari <span class="bengali">- রাজবাড়ী</span></option>
+
+                                <option value="shariatpur">Shariatpur <span class="bengali">- শরীয়তপুর</span></option>
+
+                                <option value="tangail">Tangail <span class="bengali">- টাঙ্গাইল</span></option>
+
+                                <option value="chittagong">Chittagong <span class="bengali">- চট্টগ্রাম</span></option>
+
+                                <option value="bandarban">Bandarban <span class="bengali">- বান্দরবান</span></option>
+
+                                <option value="brahmanbaria">Brahmanbaria <span class="bengali">- ব্রাহ্মণবাড়িয়া</span></option>
+
+                                <option value="chandpur">Chandpur <span class="bengali">- চাঁদপুর</span></option>
+
+                                <option value="comilla">Comilla <span class="bengali">- কুমিল্লা</span></option>
+
+                                <option value="cox's bazar">Cox's Bazar <span class="bengali">- কক্সবাজার</span></option>
+
+                                <option value="feni">Feni <span class="bengali">- ফেনী</span></option>
+
+                                <option value="khagrachhari">Khagrachhari <span class="bengali">- খাগড়াছড়ি</span></option>
+
+                                <option value="lakshmipur">Lakshmipur <span class="bengali">- লক্ষ্মীপুর</span></option>
+
+                                <option value="noakhali">Noakhali <span class="bengali">- নোয়াখালী</span></option>
+
+                                <option value="rangamati">Rangamati <span class="bengali">- রাঙ্গামাটি</span></option>
+
+                                <option value="sylhet">Sylhet <span class="bengali">- সিলেট</span></option>
+
+                                <option value="habiganj">Habiganj <span class="bengali">- হবিগঞ্জ</span></option>
+
+                                <option value="moulvibazar">Moulvibazar <span class="bengali">- মৌলভীবাজার</span></option>
+
+                                <option value="sunamganj">Sunamganj <span class="bengali">- সুনামগঞ্জ</span></option>
+
+                                <option value="khulna">Khulna <span class="bengali">- খুলনা</span></option>
+
+                                <option value="bagherhat">Bagerhat <span class="bengali">- বাগেরহাট</span></option>
+
+                                <option value="chuadanga">Chuadanga <span class="bengali">- চুয়াডাঙ্গা</span></option>
+
+                                <option value="jessore">Jashore <span class="bengali">- যশোর</span></option>
+
+                                <option value="jhenaidah">Jhenaidah <span class="bengali">- ঝিনাইদহ</span></option>
+
+                                <option value="kushtia">Kushtia <span class="bengali">- কুষ্টিয়া</span></option>
+
+                                <option value="magura">Magura <span class="bengali">- মাগুরা</span></option>
+
+                                <option value="meherpur">Meherpur <span class="bengali">- মেহেরপুর</span></option>
+
+                                <option value="narail">Narail <span class="bengali">- নড়াইল</span></option>
+
+                                <option value="satkhira">Satkhira <span class="bengali">- সাতক্ষীরা</span></option>
+
+                                <option value="rajshahi">Rajshahi <span class="bengali">- রাজশাহী</span></option>
+
+                                <option value="bogra">Bogra <span class="bengali">- বগুড়া</span></option>
+
+                                <option value="chapainawabganj">Chapainawabganj <span class="bengali">- চাঁপাইনবাবগঞ্জ</span></option>
+
+                                <option value="joypurhat">Joypurhat <span class="bengali">- জয়পুরহাট</span></option>
+
+                                <option value="naogaon">Naogaon <span class="bengali">- নওগাঁ</span></option>
+
+                                <option value="natore">Natore <span class="bengali">- নাটোর</span></option>
+
+                                <option value="pabna">Pabna <span class="bengali">- পাবনা</span></option>
+
+                                <option value="sirajganj">Sirajganj <span class="bengali">- সিরাজগঞ্জ</span></option>
+
+                                <option value="barisal">Barisal <span class="bengali">- বরিশাল</span></option>
+
+                                <option value="barguna">Barguna <span class="bengali">- বরগুনা</span></option>
+
+                                <option value="bhola">Bhola <span class="bengali">- ভোলা</span></option>
+
+                                <option value="jhalokati">Jhalokati <span class="bengali">- ঝালকাঠি</span></option>
+
+                                <option value="patuakhali">Patuakhali <span class="bengali">- পটুয়াখালী</span></option>
+
+                                <option value="pirojpur">Pirojpur <span class="bengali">- পিরোজপুর</span></option>
+
+                                <option value="rangpur">Rangpur <span class="bengali">- রংপুর</span></option>
+
+                                <option value="dinajpur">Dinajpur <span class="bengali">- দিনাজপুর</span></option>
+
+                                <option value="gaibandha">Gaibandha <span class="bengali">- গাইবান্ধা</span></option>
+
+                                <option value="kurigram">Kurigram <span class="bengali">- কুড়িগ্রাম</span></option>
+
+                                <option value="lalmonirhat">Lalmonirhat <span class="bengali">- লালমনিরহাট</span></option>
+
+                                <option value="nilphamari">Nilphamari <span class="bengali">- নীলফামারী</span></option>
+
+                                <option value="panchagarh">Panchagarh <span class="bengali">- পঞ্চগড়</span></option>
+
+                                <option value="thakurgaon">Thakurgaon <span class="bengali">- ঠাকুরগাঁও</span></option>
+
+                                <option value="mymensingh">Mymensingh <span class="bengali">- ময়মনসিংহ</span></option>
+
+                                <option value="jamalpur">Jamalpur <span class="bengali">- জামালপুর</span></option>
+
+                                <option value="netrokona">Netrokona <span class="bengali">- নেত্রকোণা</span></option>
+
+                                <option value="sherpur">Sherpur <span class="bengali">- শেরপুর</span></option>
+
+                            </select>
+
+                        </div>
+
+                        
+
+                        <div class="form-group">
+
+                            <label for="product" class="mixed-text">Select Product <span class="bengali">- পণ্য নির্বাচন করুন</span></label>
+
+                            <select id="product" name="product" required>
+
+                                <option value="device">Sinocare Safe Accu Device (৳ 800)</option>
+
+                                <option value="strips">Test Strips 50 pcs (৳ 900)</option>
+
+                                <option value="combo">Device + 50 Strips Combo (৳ 1,700)</option>
+
+                            </select>
+
+                        </div>
+
+                        
+
+                        <div class="form-group">
+
+                            <label for="quantity" class="mixed-text">Quantity <span class="bengali">- পরিমাণ</span></label>
+
+                            <select id="quantity" name="quantity" required>
+
+                                <option value="1">1 Piece <span class="bengali">- ১ পিস</span></option>
+
+                                <option value="2">2 Pieces <span class="bengali">- ২ পিস</span></option>
+
+                                <option value="3">3 Pieces <span class="bengali">- ৩ পিস</span></option>
+
+                                <option value="4">4 Pieces <span class="bengali">- ৪ পিস</span></option>
+
+                                <option value="5">5 Pieces <span class="bengali">- ৫ পিস</span></option>
+
+                            </select>
+
+                        </div>
+
+                        
+
+                        <div class="payment-methods">
+
+                            <h3 class="mixed-text">Payment Method <span class="bengali">- পেমেন্ট পদ্ধতি</span></h3>
+
+                            <div class="payment-options">
+
+                                <div class="payment-option" data-method="bkash">
+
+                                    <div class="payment-icon bkash"><i class="fas fa-mobile-alt"></i></div>
+
+                                    <div class="mixed-text">bKash <span class="bengali">- বিকাশ</span></div>
+
+                                </div>
+
+                                <div class="payment-option" data-method="visa">
+
+                                    <div class="payment-icon visa"><i class="fab fa-cc-visa"></i></div>
+
+                                    <div class="mixed-text">Visa Card <span class="bengali">- ভিসা কার্ড</span></div>
+
+                                </div>
+
+                                <div class="payment-option" data-method="mastercard">
+
+                                    <div class="payment-icon mastercard"><i class="fab fa-cc-mastercard"></i></div>
+
+                                    <div class="mixed-text">Mastercard <span class="bengali">- মাস্টারকার্ড</span></div>
+
+                                </div>
+
+                                <div class="payment-option" data-method="cod">
+
+                                    <div class="payment-icon cod"><i class="fas fa-money-bill-wave"></i></div>
+
+                                    <div class="mixed-text">Cash on Delivery <span class="bengali">- ক্যাশ অন ডেলিভারি</span></div>
+
+                                </div>
+
+                            </div>
+
+                            <input type="hidden" id="paymentMethod" name="paymentMethod" required>
+
+                        </div>
+
+                        
+
+                        <button type="submit" class="btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+
+                            Place Order <span class="bengali">- অর্ডার দিন</span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                
+
+                <div class="order-summary">
+
+                    <h2 class="mixed-text">Order Summary <span class="bengali">- অর্ডার সারাংশ</span></h2>
+
+                    
+
+                    <div class="summary-item">
+
+                        <span class="mixed-text">Sinocare Safe Accu (x1) <span class="bengali">- সিনোকেয়ার সেফ অ্যাকিউ (x১)</span></span>
+
+                        <span>৳ 800</span>
+
+                    </div>
+
+                    
+
+                    <div class="summary-item">
+
+                        <span class="mixed-text">5 FREE Test Strips <span class="bengali">- ৫টি ফ্রি টেস্ট স্ট্রিপ</span></span>
+
+                        <span>৳ 0</span>
+
+                    </div>
+
+                    
+
+                    <div class="summary-item">
+
+                        <span class="mixed-text">Delivery Charge <span class="bengali">- ডেলিভারি চার্জ</span></span>
+
+                        <span id="deliveryCharge">৳ 0</span>
+
+                    </div>
+
+                    
+
+                    <div class="summary-total">
+
+                        <span class="mixed-text">Total <span class="bengali">- মোট</span></span>
+
+                        <span id="totalAmount">৳ 800</span>
+
+                    </div>
+
+                    
+
+                    <div class="delivery-info" style="margin-top: 20px;">
+
+                        <h3 class="mixed-text">What You Get <span class="bengali">- আপনি যা পাবেন</span></h3>
+
+                        <p class="mixed-text">✓ Sinocare Safe Accu Device</p>
+
+                        <p class="mixed-text">✓ 5 FREE Test Strips</p>
+
+                        <p class="mixed-text">✓ 2-Year Exclusive Warranty</p>
+
+                        <p class="mixed-text">✓ Free Delivery (Inside Dhaka)</p>
+
+                    </div>
+
+                    
+
+                    <div class="exclusive-price" style="margin-top: 20px;">
+
+                        <h3 class="mixed-text">Special Combo Offer <span class="bengali">- বিশেষ কম্বো অফার</span></h3>
+
+                        <p class="mixed-text">Device + 50 Strips: <strong>৳ 1,700</strong></p>
+
+                        <p class="mixed-text">Save ৳ 1,850 compared to MRP!</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-column">
+
+                    <h3>MyPharmaBD</h3>
+
+                    <p class="mixed-text">Your trusted partner for quality healthcare products in Bangladesh. <span class="bengali">- বাংলাদেশে মানসম্পন্ন স্বাস্থ্যসেবা পণ্যের জন্য আপনার বিশ্বস্ত অংশীদার।</span></p>
+
+                    <div class="contact-info">
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+
+                            <div>+8801991115505</div>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+
+                            <div>hello@mypharmabd.com</div>
+
+                        </div>
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+
+                            <div>203/19, Ground Floor, North Manda, Boropara, Dhaka-1214</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="social-links">
+
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="footer-column">
+
+                    <h3 class="mixed-text">Quick Links <span class="bengali">- দ্রুত লিংক</span></h3>
+
+                    <ul>
+
+                        <li><a href="#">Home <span class="bengali">- হোম</span></a></li>
+
+                        <li><a href="#">Products <span class="bengali">- পণ্য</span></a></li>
+
+                        <li><a href="#">About Us <span class="bengali">- আমাদের সম্পর্কে</span></a></li>
+
+                        <li><a href="#">Contact <span class="bengali">- যোগাযোগ</span></a></li>
+
+                    </ul>
+
+                </div>
+
+                
+
+                <div class="footer-column">
+
+                    <h3 class="mixed-text">Customer Service <span class="bengali">- গ্রাহক সেবা</span></h3>
+
+                    <ul>
+
+                        <li><a href="#">Shipping Policy <span class="bengali">- শিপিং নীতি</span></a></li>
+
+                        <li><a href="#">Return Policy <span class="bengali">- ফেরত নীতি</span></a></li>
+
+                        <li><a href="#">FAQ <span class="bengali">- সাধারণ প্রশ্ন</span></a></li>
+
+                        <li><a href="#">Privacy Policy <span class="bengali">- গোপনীয়তা নীতি</span></a></li>
+
+                    </ul>
+
+                </div>
+
+                
+
+                <div class="footer-column">
+
+                    <h3 class="mixed-text">Contact Us <span class="bengali">- আমাদের সাথে যোগাযোগ করুন</span></h3>
+
+                    <ul>
+
+                        <li class="mixed-text">Phone: +8801991115505</li>
+
+                        <li class="mixed-text">Email: hello@mypharmabd.com</li>
+
+                        <li class="mixed-text">Website: www.mypharmabd.com</li>
+
+                        <li class="mixed-text">Address: 203/19, Ground Floor, North Manda, Boropara, Dhaka-1214</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="copyright">
+
+                <p class="mixed-text">&copy; 2023 MyPharmaBD. All rights reserved. <span class="bengali">- ২০২৩ মাইফার্মাবিডি। সকল স্বত্ব সংরক্ষিত।</span></p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        // Payment method selection
+
+        document.querySelectorAll('.payment-option').forEach(option => {
+
+            option.addEventListener('click', function() {
+
+                document.querySelectorAll('.payment-option').forEach(opt => {
+
+                    opt.classList.remove('selected');
+
+                });
+
+                this.classList.add('selected');
+
+                document.getElementById('paymentMethod').value = this.getAttribute('data-method');
+
+            });
+
+        });
+
+        
+
+        // Product selection and price calculation
+
+        document.getElementById('product').addEventListener('change', updateOrderSummary);
+
+        document.getElementById('quantity').addEventListener('change', updateOrderSummary);
+
+        document.getElementById('city').addEventListener('change', updateOrderSummary);
+
+        
+
+        function updateOrderSummary() {
+
+            const product = document.getElementById('product').value;
+
+            const quantity = parseInt(document.getElementById('quantity').value);
+
+            const city = document.getElementById('city').value;
+
+            
+
+            let productPrice = 0;
+
+            let productName = '';
+
+            
+
+            switch(product) {
+
+                case 'device':
+
+                    productPrice = 800;
+
+                    productName = 'Sinocare Safe Accu Device';
+
+                    break;
+
+                case 'strips':
+
+                    productPrice = 900;
+
+                    productName = 'Test Strips 50 pcs';
+
+                    break;
+
+                case 'combo':
+
+                    productPrice = 1700;
+
+                    productName = 'Device + 50 Strips Combo';
+
+                    break;
+
+            }
+
+            
+
+            let deliveryCharge = 0;
+
+            if (city !== 'dhaka' && city !== '') {
+
+                deliveryCharge = 120;
+
+            }
+
+            
+
+            const totalAmount = (productPrice * quantity) + deliveryCharge;
+
+            
+
+            // Update order summary
+
+            document.querySelector('.summary-item:first-child span:first-child').textContent = `${productName} (x${quantity})`;
+
+            document.querySelector('.summary-item:first-child span:last-child').textContent = `৳ ${productPrice * quantity}`;
+
+            document.getElementById('deliveryCharge').textContent = `৳ ${deliveryCharge}`;
+
+            document.getElementById('totalAmount').textContent = `৳ ${totalAmount}`;
+
+        }
+
+        
+
+        // Form submission
+
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+
+            e.preventDefault();
+
+            
+
+            const paymentMethod = document.getElementById('paymentMethod').value;
+
+            if (!paymentMethod) {
+
+                alert('Please select a payment method.\nঅনুগ্রহ করে একটি পেমেন্ট পদ্ধতি নির্বাচন করুন।');
+
+                return;
+
+            }
+
+            
+
+            // In a real application, you would send the form data to a server here
+
+            alert('Your order has been placed successfully!\nআপনার অর্ডার সফলভাবে দেওয়া হয়েছে!');
+
+        });
+
+        
+
+        // Handle order buttons from product sections
+
+        document.querySelectorAll('.order-buttons .btn-primary').forEach(button => {
+
+            button.addEventListener('click', function(e) {
+
+                e.preventDefault();
+
+                const productType = this.getAttribute('data-product');
+
+                document.getElementById('product').value = productType;
+
+                updateOrderSummary();
+
+                document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+
+            });
+
+        });
+
+        
+
+        // Initialize order summary
+
+        updateOrderSummary();
+
+    </script>
+
+</body>
+
+</html>
